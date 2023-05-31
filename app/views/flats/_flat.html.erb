@@ -1,0 +1,20 @@
+<div id="<%= dom_id flat %>">
+  <div class="container d-flex flex-direction: column justify-content-center">
+        <div class="card m-4" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmxhdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="flat">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.description %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= flat.address %></li>
+            <li class="list-group-item">Price: <%= flat.price_by_night %></li>
+            <li class="list-group-item">N° guests: <%= flat.number_of_guests %></li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link text-color-green"><%= link_to "More info", flat %></a> |
+            <a href="#" class="card-link text-color-red"><%= link_to "remove", @flat,  method: :delete %></a>
+          </div>
+        </div>
+  </div>
+</div>

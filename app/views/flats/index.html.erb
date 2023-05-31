@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Flats</h1>
+<div class="container">
+  <div id="flats">
+    <% @flats.each do |flat| %>
+      <%= render flat %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to "New flat", new_flat_path %>
